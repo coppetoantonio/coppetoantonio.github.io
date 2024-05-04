@@ -2,12 +2,53 @@
 <html>
 <head>
  <style>
+   ul.sidenav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+   
+    li {
+      float: left;
+    }
+   
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+   
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+   
+    .active {
+      background-color: red;
+    }
+p {
+      margin-left: 20px;
+      margin-right: 40px;
+      font-family: Arial, sans-serif;
+      font-size: 25px;
+      line-height: 1.5;
+      color: black;
+    }
     body {
   background-color: lightcyan;
 }
  </style>
 <title>curiosità sulla pizza</title>
 </head>
+<ul class="sidenav">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="index2.html">curiosità</a></li>
+  <li><a href="index3.html">storia</a></li>
+  <li><a href="index4.html">tipi di pizza</a></li>
+</ul>
 <body style="color:black">
 <h1>curiosità sulla pizza</h1>
 <h2><b><i>patrimonio unesco</i></b></h2>
