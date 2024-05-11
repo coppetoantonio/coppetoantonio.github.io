@@ -50,6 +50,28 @@ img {
       h1  {
        font-size: 50px; 
       }
+      .slideshow {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .slideshow img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
 </style>
 <title>Tipi di pizza</title>
 </head>
@@ -61,6 +83,29 @@ img {
   <li><a href="index5.html">ricetta</a></li>
 </ul>
 <body align="center">
+  <div class="slideshow">
+    <img class="slide" src="marinara.jpg" alt="Immagine 1">
+    <img class="slide" src="pepe.jpg" alt="Immagine 2">
+    <img class="slide" src="salsiccia.jpg" alt="Immagine 3">
+    <button class="next" onclick="nextSlide()">Next</button>
+  </div>
+  <script>
+    var slideIndex = 0;
+    function nextSlide() {
+    var slides = document.getElementsByClassName("slide");
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    slides[slideIndex].style.display = "block";
+  }
+  nextSlide();
+</script>
+
+
 <h1>tipi di pizza</h1>
 <h2><i>Le 2 pizze originali</i></h2>
 <p>Secondo la tradizione le pizze originali sono 2,la pizza margherita(pomodoro mozzarella e basilico) e la marinara (pomodoro olio e origano), nel corso del tempo sono però stati creati centinaia di altri gusti dai più comuni ai più stravaganti.</p></p>
